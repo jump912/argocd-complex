@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: storage
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jump912/argocd-complex.git
+    targetRevision: main
+    # Now this points to the actual PV & PVC manifest path
+    # in my example - my-git-repo/storage
+    path: storage
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default # or wherever you want
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true

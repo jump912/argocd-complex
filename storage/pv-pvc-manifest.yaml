@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: storage1
+  namespace: default # change if your app uses a different namespace
+spec:
+  # no storage class name means it will use the default storage class
+  # whatever storage class the cluster set as default
+  # check using command: kubectl get storageclass
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: storage2
+  namespace: default # change if your app uses a different namespace
+spec:
+  # no storage class name means it will use the default storage class
+  # whatever storage class the cluster set as default
+  # check using command: kubectl get storageclass
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: storage3
+  namespace: default # change if your app uses a different namespace
+spec:
+  # no storage class name means it will use the default storage class
+  # whatever storage class the cluster set as default
+  # check using command: kubectl get storageclass
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
