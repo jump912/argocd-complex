@@ -8,7 +8,7 @@ spec:
   # whatever storage class the cluster set as default
   # check using command: kubectl get storageclass
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
@@ -24,7 +24,7 @@ spec:
   # whatever storage class the cluster set as default
   # check using command: kubectl get storageclass
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
@@ -40,7 +40,7 @@ spec:
   # whatever storage class the cluster set as default
   # check using command: kubectl get storageclass
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
